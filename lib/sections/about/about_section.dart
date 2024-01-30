@@ -24,14 +24,14 @@ class AboutSection extends GetResponsiveView {
                     Expanded(
                       child: AboutSectionText(
                         text:
-                            "Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore mag aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.",
+                            "I am a Backend developer with experience developing optimised server-side applications using Python and Javascript. I am passionate about creating solutions that power dynamic applications and ensure seamless interactions between the front end and the server.",
                       ),
                     ),
-                    Expanded(flex: 0, child: ExperienceCard(numOfExp: "08")),
+                    Expanded(flex: 0, child: ExperienceCard(numOfExp: "02")),
                     Expanded(
                       child: AboutSectionText(
                         text:
-                            "Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore mag aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.",
+                            "Throughout my career, I have worked on a diverse range of projects, and I am always eager to expand my knowledge and tackle complex problems. I believe in the power of continuous learning and strive to improve my skills every day.",
                       ),
                     ),
                   ],
@@ -49,7 +49,7 @@ class AboutSection extends GetResponsiveView {
                         Expanded(
                           child: AboutSectionText(
                             text:
-                                "Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore mag aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.",
+                                "I am a Backend developer with experience developing optimised server-side applications using Python and Javascript. I am passionate about creating solutions that power dynamic applications and ensure seamless interactions between the front end and the server.",
                           ),
                         ),
                       ],
@@ -59,11 +59,11 @@ class AboutSection extends GetResponsiveView {
                     ),
                     Row(
                       children: [
-                        Expanded(child: ExperienceCard(numOfExp: "08")),
+                        Expanded(child: ExperienceCard(numOfExp: "02")),
                         Expanded(
                           child: AboutSectionText(
                             text:
-                                "Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore mag aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.",
+                                "Throughout my career, I have worked on a diverse range of projects, and I am always eager to expand my knowledge and tackle complex problems. I believe in the power of continuous learning and strive to improve my skills every day.",
                           ),
                         ),
                       ],
@@ -77,16 +77,16 @@ class AboutSection extends GetResponsiveView {
               crossAxisAlignment: CrossAxisAlignment.center,
               mainAxisAlignment: MainAxisAlignment.spaceEvenly,
               children: [
-                MyOutlineButton(
-                  imageSrc: "assets/images/hand.png",
-                  text: "Hire Me!",
-                  press: () {},
-                ),
-                DefaultButton(
-                  imageSrc: "assets/images/download.png",
-                  text: "Download CV",
-                  press: () {},
-                ),
+                // MyOutlineButton(
+                //   imageSrc: "assets/images/hand.png",
+                //   text: "Hire Me!",
+                //   press: () {},
+                // ),
+                // DefaultButton(
+                //   imageSrc: "assets/images/download.png",
+                //   text: "Download Resume",
+                //   press: () {},
+                // ),
               ],
             ),
           ),

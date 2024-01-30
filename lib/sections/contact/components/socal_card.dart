@@ -44,10 +44,16 @@ class _SocalCardState extends State<SocalCard> {
           ),
           child: Row(
             children: [
-              Image.asset(
-                widget.iconSrc,
-                height: 80,
-                width: 80,
+              Padding(
+                padding: const EdgeInsets.only(top: 10, bottom: 10),
+                child: ClipRRect(
+                  borderRadius: BorderRadius.circular(8.0),
+                  child: Image.asset(
+                    widget.iconSrc,
+                    height: 60,
+                    width: 60,
+                  ),
+                ),
               ),
               SizedBox(width: kDefaultPadding),
               Text(widget.name),

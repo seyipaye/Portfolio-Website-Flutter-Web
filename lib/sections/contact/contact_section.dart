@@ -6,6 +6,8 @@ import 'package:web_app/constants.dart';
 
 import 'components/socal_card.dart';
 
+import 'package:url_launcher/url_launcher.dart';
+
 class ContactSection extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
@@ -25,7 +27,7 @@ class ContactSection extends StatelessWidget {
           SizedBox(height: kDefaultPadding * 2.5),
           SectionTitle(
             title: "Contact Me",
-            subTitle: "For Project inquiry and information",
+            subTitle: "For inquiry and information",
             color: Color(0xFF07E24A),
           ),
           ContactBox()
@@ -61,21 +63,36 @@ class ContactBox extends GetResponsiveView {
                   children: [
                     SocalCard(
                       color: Color(0xFFD9FFFC),
-                      iconSrc: "assets/images/skype.png",
-                      name: 'TheFlutterWay',
-                      press: () {},
+                      iconSrc: "assets/images/github.png",
+                      name: 'Github',
+                      press: () {
+                        final Uri _url =
+                            Uri.parse('https://github.com/seyipaye');
+                        launchUrl(_url);
+                      },
                     ),
                     SocalCard(
                       color: Color(0xFFE4FFC7),
-                      iconSrc: "assets/images/whatsapp.png",
-                      name: 'TheFlutterWay',
-                      press: () {},
+                      iconSrc: "assets/images/linkden.png",
+                      name: 'Linkedin',
+                      press: () {
+                        final Uri _url =
+                            Uri.parse('https://www.linkedin.com/in/seyipaye');
+                        launchUrl(_url);
+                      },
                     ),
                     SocalCard(
                       color: Color(0xFFE8F0F9),
-                      iconSrc: "assets/images/messanger.png",
-                      name: 'TheFlutterWay',
-                      press: () {},
+                      iconSrc: "assets/images/email.png",
+                      name: 'Send an Email',
+                      press: () {
+                        final Uri emailLaunchUri = Uri(
+                          scheme: 'mailto',
+                          path: 'seyipaye@gmail.com',
+                        );
+
+                        launchUrl(emailLaunchUri);
+                      },
                     ),
                   ],
                 )
@@ -105,8 +122,8 @@ class ContactBox extends GetResponsiveView {
                     ],
                   ),
                 ),
-          SizedBox(height: kDefaultPadding * 2),
-          ContactForm(),
+          SizedBox(height: kDefaultPadding),
+          // ContactForm(),
         ],
       ),
     );

@@ -36,14 +36,14 @@ class GlassContent extends GetResponsiveView {
                 height: screen.isDesktop ? 20 : Get.height * 0.1,
               ),
               Text(
-                "Hello There!",
+                "Hello There!, my name is",
                 style: Theme.of(Get.context!)
                     .textTheme
                     .labelLarge!
                     .copyWith(color: Colors.white),
               ),
               Text(
-                "Robbie \nRutherford",
+                "Oluwaseyifunmi \nIpaye",
                 style: TextStyle(
                   fontSize: !screen.isDesktop ? 40 : 100,
                   fontWeight: FontWeight.bold,
@@ -53,7 +53,7 @@ class GlassContent extends GetResponsiveView {
               ),
               screen.isDesktop || screen.isTablet
                   ? Text(
-                      "Creative Design Director",
+                      "Backend Developer",
                       style: Theme.of(Get.context!)
                           .textTheme
                           .headlineSmall!

@@ -40,8 +40,8 @@ class HomeScreen extends GetResponsiveView {
             SizedBox(height: kDefaultPadding * 2),
             AboutSection(),
             ServiceSection(),
-            RecentWorkSection(),
-            FeedbackSection(),
+            // RecentWorkSection(),
+            // FeedbackSection(),
             SizedBox(height: kDefaultPadding),
             ContactSection(),
             // This SizeBox just for demo

@@ -16,8 +16,8 @@ class ServiceSection extends GetResponsiveView {
         children: [
           SectionTitle(
             color: Color(0xFFFF0000),
-            title: "Service Offerings",
-            subTitle: "My Strong Arenas",
+            title: "Skills",
+            subTitle: "Programming languages",
           ),
           screen.isDesktop
               ? Row(
