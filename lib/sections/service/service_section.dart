@@ -16,8 +16,8 @@ class ServiceSection extends GetResponsiveView {
         children: [
           SectionTitle(
             color: Color(0xFFFF0000),
-            title: "Skills",
-            subTitle: "Programming languages",
+            title: "My Skills",
+            subTitle: "Here's what am I capable of",
           ),
           screen.isDesktop
               ? Row(
@@ -25,15 +25,22 @@ class ServiceSection extends GetResponsiveView {
                   children: List.generate(
                       services.length, (index) => ServiceCard(index: index)),
                 )
-              : Column(
-                  mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                  children: List.generate(
-                      services.length,
-                      (index) => SizedBox(
-                          height: Get.width * 0.7,
-                          width: Get.width * 0.5,
-                          child: ServiceCard(index: index))),
-                )
+              : screen.isTablet
+                  ? Wrap(
+                      spacing: 20, // gap between adjacent chips
+                      runSpacing: 4.0, // gap between lines
+                      children: List.generate(services.length,
+                          (index) => ServiceCard(index: index)),
+                    )
+                  : Column(
+                      mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                      children: List.generate(
+                          services.length,
+                          (index) => SizedBox(
+                              height: Get.width * 0.7,
+                              width: Get.width * 0.5,
+                              child: ServiceCard(index: index))),
+                    )
         ],
       ),
     );
