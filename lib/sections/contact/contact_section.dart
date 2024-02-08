@@ -57,7 +57,7 @@ class ContactBox extends GetResponsiveView {
       ),
       child: Column(
         children: [
-          screen.isDesktop
+          screen.isDesktop || screen.isTablet
               ? Row(
                   mainAxisAlignment: MainAxisAlignment.spaceBetween,
                   children: [
@@ -65,7 +65,7 @@ class ContactBox extends GetResponsiveView {
                       color: Color(0xFFD9FFFC),
                       iconSrc: "assets/images/github.png",
                       name: 'Github',
-                      press: () {
+                      onPress: () {
                         final Uri _url =
                             Uri.parse('https://github.com/seyipaye');
                         launchUrl(_url);
@@ -75,7 +75,7 @@ class ContactBox extends GetResponsiveView {
                       color: Color(0xFFE4FFC7),
                       iconSrc: "assets/images/linkden.png",
                       name: 'Linkedin',
-                      press: () {
+                      onPress: () {
                         final Uri _url =
                             Uri.parse('https://www.linkedin.com/in/seyipaye');
                         launchUrl(_url);
@@ -85,7 +85,7 @@ class ContactBox extends GetResponsiveView {
                       color: Color(0xFFE8F0F9),
                       iconSrc: "assets/images/email.png",
                       name: 'Send an Email',
-                      press: () {
+                      onPress: () {
                         final Uri emailLaunchUri = Uri(
                           scheme: 'mailto',
                           path: 'seyipaye@gmail.com',
@@ -103,21 +103,36 @@ class ContactBox extends GetResponsiveView {
                     children: [
                       SocalCard(
                         color: Color(0xFFD9FFFC),
-                        iconSrc: "assets/images/skype.png",
-                        name: 'TheFlutterWay',
-                        press: () {},
+                        iconSrc: "assets/images/github.png",
+                        name: 'Github',
+                        onPress: () {
+                          final Uri _url =
+                              Uri.parse('https://github.com/seyipaye');
+                          launchUrl(_url);
+                        },
                       ),
                       SocalCard(
                         color: Color(0xFFE4FFC7),
-                        iconSrc: "assets/images/whatsapp.png",
-                        name: 'TheFlutterWay',
-                        press: () {},
+                        iconSrc: "assets/images/linkden.png",
+                        name: 'Linkedin',
+                        onPress: () {
+                          final Uri _url =
+                              Uri.parse('https://www.linkedin.com/in/seyipaye');
+                          launchUrl(_url);
+                        },
                       ),
                       SocalCard(
                         color: Color(0xFFE8F0F9),
-                        iconSrc: "assets/images/messanger.png",
-                        name: 'TheFlutterWay',
-                        press: () {},
+                        iconSrc: "assets/images/email.png",
+                        name: 'Send an Email',
+                        onPress: () {
+                          final Uri emailLaunchUri = Uri(
+                            scheme: 'mailto',
+                            path: 'seyipaye@gmail.com',
+                          );
+
+                          launchUrl(emailLaunchUri);
+                        },
                       ),
                     ],
                   ),

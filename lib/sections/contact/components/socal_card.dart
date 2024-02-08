@@ -8,12 +8,12 @@ class SocalCard extends StatefulWidget {
     required this.iconSrc,
     required this.name,
     required this.color,
-    required this.press,
+    required this.onPress,
   }) : super(key: key);
 
   final String iconSrc, name;
   final Color color;
-  final Function()? press;
+  final Function()? onPress;
 
   @override
   _SocalCardState createState() => _SocalCardState();
@@ -25,7 +25,7 @@ class _SocalCardState extends State<SocalCard> {
   Widget build(BuildContext context) {
     return FittedBox(
       child: InkWell(
-        onTap: widget.press,
+        onTap: widget.onPress,
         onHover: (value) {
           setState(() {
             isHover = value;
