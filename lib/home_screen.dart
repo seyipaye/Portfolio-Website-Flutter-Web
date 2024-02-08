@@ -18,31 +18,31 @@ class HomeScreen extends GetResponsiveView {
     return Scaffold(
       key: _scaffoldKey,
       extendBodyBehindAppBar: true,
-      appBar: screen.isDesktop
-          ? null
-          : AppBar(
-              backgroundColor: Colors.transparent,
-              elevation: 0,
-              leading: Container(),
-              actions: [
-                IconButton(
-                    onPressed: () {
-                      _scaffoldKey.currentState!.openEndDrawer();
-                    },
-                    icon: Icon(Icons.menu))
-              ],
-            ),
+      // appBar: screen.isDesktop
+      //     ? null
+      //     : AppBar(
+      //         backgroundColor: Colors.transparent,
+      //         elevation: 0,
+      //         leading: Container(),
+      //         actions: [
+      //           IconButton(
+      //               onPressed: () {
+      //                 _scaffoldKey.currentState!.openEndDrawer();
+      //               },
+      //               icon: Icon(Icons.menu))
+      //         ],
+      //       ),
       endDrawer: customDrawer,
       body: SingleChildScrollView(
         child: Column(
           children: [
             TopSection(),
-            SizedBox(height: kDefaultPadding * 2),
+            const SizedBox(height: kDefaultPadding * 2),
             AboutSection(),
             ServiceSection(),
             // RecentWorkSection(),
             // FeedbackSection(),
-            SizedBox(height: kDefaultPadding),
+            const SizedBox(height: kDefaultPadding),
             ContactSection(),
             // This SizeBox just for demo
             // SizedBox(

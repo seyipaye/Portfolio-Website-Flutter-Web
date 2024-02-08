@@ -53,14 +53,14 @@ class GlassContent extends GetResponsiveView {
               ),
               screen.isDesktop || screen.isTablet
                   ? Text(
-                      "Backend Developer",
+                      "I'm a Backend Developer",
                       style: Theme.of(Get.context!)
                           .textTheme
                           .headlineSmall!
                           .copyWith(color: Colors.white),
                     )
                   : Text(
-                      "\nCreative\nDesign\nDirector",
+                      "I'm a Backend Developer",
                       style: Theme.of(Get.context!)
                           .textTheme
                           .titleMedium!

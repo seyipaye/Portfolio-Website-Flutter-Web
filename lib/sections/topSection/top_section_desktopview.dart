@@ -22,10 +22,10 @@ class TopSectionDesktop extends StatelessWidget {
             right: 0,
             child: PersonPic(),
           ),
-          Positioned(
-            bottom: 0,
-            child: Menu(),
-          ),
+          // Positioned(
+          //   bottom: 0,
+          //   child: Menu(),
+          // ),
         ],
       ),
     );

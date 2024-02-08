@@ -1,10 +1,17 @@
+import 'package:device_preview/device_preview.dart';
+import 'package:flutter/foundation.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:web_app/constants.dart';
 import 'package:web_app/home_screen.dart';
 
 void main() {
-  runApp(MyApp());
+  runApp(
+    DevicePreview(
+      enabled: false, //!kReleaseMode,
+      builder: (context) => MyApp(),
+    ),
+  );
 }
 
 class MyApp extends StatelessWidget {
