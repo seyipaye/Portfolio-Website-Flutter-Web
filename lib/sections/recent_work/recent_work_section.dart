@@ -23,13 +23,13 @@ class RecentWorkSection extends StatelessWidget {
       ),
       child: Column(
         children: [
-          Transform.translate(
-            offset: Offset(0, -80),
-            child: HireMeCard(),
-          ),
+          // Transform.translate(
+          //   offset: Offset(0, -80),
+          //   child: HireMeCard(),
+          // ),
           SectionTitle(
             title: "Recent Works",
-            subTitle: "My Strong Arenas",
+            subTitle: "What I have been up to",
             color: Color(0xFFFFB100),
           ),
           SizedBox(height: kDefaultPadding * 1.5),

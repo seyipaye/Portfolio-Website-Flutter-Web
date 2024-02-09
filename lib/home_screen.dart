@@ -34,13 +34,14 @@ class HomeScreen extends GetResponsiveView {
       //       ),
       endDrawer: customDrawer,
       body: SingleChildScrollView(
+        key: PageStorageKey('value'),
         child: Column(
           children: [
             TopSection(),
             const SizedBox(height: kDefaultPadding * 2),
             AboutSection(),
             ServiceSection(),
-            // RecentWorkSection(),
+            RecentWorkSection(),
             // FeedbackSection(),
             const SizedBox(height: kDefaultPadding),
             ContactSection(),

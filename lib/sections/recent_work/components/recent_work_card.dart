@@ -40,7 +40,16 @@ class _RecentWorkCardState extends State<RecentWorkCard> {
         ),
         child: Row(
           children: [
-            Expanded(child: Image.asset(recentWorks[widget.index].image)),
+            SizedBox(width: 10),
+            Expanded(
+              child: ClipRRect(
+                borderRadius: BorderRadius.circular(10),
+                child: Image.asset(
+                  recentWorks[widget.index].image,
+                  fit: BoxFit.fitWidth,
+                ),
+              ),
+            ),
             Expanded(
               child: Padding(
                 padding: EdgeInsets.symmetric(horizontal: kDefaultPadding),
